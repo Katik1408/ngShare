@@ -1,0 +1,19 @@
+<div class="container" style="margin-top: 20px;" >
+
+    <button class="btn btn-primary" style="margin-bottom: 20px;"   (click)="createStudentComponent()">CreateStudent</button>
+
+  <table class="table">
+    <tr>
+      <td>Name</td>
+
+      <td>Age</td>
+
+      <td>Place</td>
+    </tr>
+    <tr *ngFor="let student of students" >
+      <td> {{student.name}} </td>
+      <td> {{student.age}} </td>
+      <td> {{student.place}} </td>
+    </tr>
+  </table>
+</div>

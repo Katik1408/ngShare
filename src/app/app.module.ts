@@ -6,8 +6,11 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './category/category.component';
+import { CrudComponent } from './crud/crud.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,8 +18,16 @@ import { CategoryComponent } from './category/category.component';
     ChildComponent,
     NavbarComponent,
     CategoryComponent,
+    CrudComponent,
+    CreatestudentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

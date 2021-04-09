@@ -1,0 +1,23 @@
+<div class="container" style="margin: 20px; padding: 20px">
+  <form [formGroup]="studentForm" (ngSubmit)="sendData(studentForm.value)">
+    <input
+      formControlName="name"
+      placeholder="Name"
+      type="text"
+      class="form-control m-4"
+    />
+    <input
+      placeholder="Age"
+      formControlName="age"
+      type="number"
+      class="form-control m-4"
+    />
+    <input
+      placeholder="Place"
+      type="text"
+      formControlName="place"
+      class="form-control m-4"
+    />
+    <input type="submit" value="Send data" class="btn btn-success" />
+  </form>
+</div>
