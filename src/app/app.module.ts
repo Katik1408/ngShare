@@ -9,8 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryComponent } from './category/category.component';
 import { CrudComponent } from './crud/crud.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { ErrorInterceptor } from 'src/app/_interceptors/error.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,9 @@ import { CreatestudentComponent } from './createstudent/createstudent.component'
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
