@@ -1,0 +1,19 @@
+<div class="container" style="margin: 20px; padding: 20px">
+    <form [formGroup]="loginForm" (ngSubmit)="goToDashboard(loginForm.value)">
+      <input
+        formControlName="uname"
+        placeholder="Username"
+        type="text"
+        class="form-control m-4"
+      />
+      <input
+        placeholder="Password"
+        formControlName="pwd"
+        type="password"
+        class="form-control m-4"
+      />
+     
+      <input type="submit" value="Send data" class="btn btn-success" />
+    </form>
+  </div>
+  

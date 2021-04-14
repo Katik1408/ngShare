@@ -12,6 +12,8 @@ import { CrudComponent } from './crud/crud.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CreatestudentComponent } from './createstudent/createstudent.component';
 import { ErrorInterceptor } from 'src/app/_interceptors/error.interceptor';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import { ErrorInterceptor } from 'src/app/_interceptors/error.interceptor';
     CategoryComponent,
     CrudComponent,
     CreatestudentComponent,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
