@@ -1,2 +1,82 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+<!-- 
+<h1>
+    {{title}}
+</h1> -->
+
+<!-- Pipes in ANgular-->
+
+<!--
+    1. Currency Pipe
+-->
+
+{{ price | currency: curr }}
+<br />
+<!--2. Json Pipe-->
+{{ people | json }}
+
+<!--
+3. Slice Pipe
+-->
+<!--
+    Index Numbers  0,1,2,3,4,5,6,7,8
+    Actual Numbers 1,2,3,4,5,6,7,8,9
+    Slice of 1:6   2,3,4,5,6
+-->
+<br />
+{{ numbers | slice: 1:6 }}
+
+<!--
+    4. Decimal Pipe
+-->
+
+<br />
+<strong>Decimal Pipe</strong>
+<br />
+{{ 245.367 | number: "4.1-2" }}
+
+<!--
+    5. lowercase 
+-->
+<br />
+{{ "ANGULAR" | lowercase }}
+
+<!--
+    6. Uppercase
+-->
+<br />
+{{ "angular" | uppercase }}
+
+<!--
+   7. Date Pipe
+-->
+<br />
+<strong>DOJ</strong>
+<br />
+{{ doj | date: "fullDate" }}
+
+<br />
+<strong> Percent Pipe</strong>
+<br />
+
+{{ 2345 | percent: "8.3-4" }}
+
+<!--
+    Custom Pipe
+-->
+
+<br />
+
+
+{{ 5 | multiplier:5 }}
+
+
+<div >
+    <p appBackgroundChange>This is inside div</p>
+</div>
+<div>
+    <p appBackgroundChange>
+        This is another
+    </p>
+</div>

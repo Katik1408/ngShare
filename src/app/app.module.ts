@@ -14,6 +14,9 @@ import { CreatestudentComponent } from './createstudent/createstudent.component'
 import { ErrorInterceptor } from 'src/app/_interceptors/error.interceptor';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MultiplierPipe } from './pipes/multiplier.pipe';
+import { BackgroundChangeDirective } from './_directives/background-change.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CreatestudentComponent,
     LoginComponent,
     DashboardComponent,
+    MultiplierPipe,
+    BackgroundChangeDirective,
+    
   ],
   imports: [
     BrowserModule,
