@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MultiplierPipe } from './pipes/multiplier.pipe';
 import { BackgroundChangeDirective } from './_directives/background-change.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BackgroundChangeDirective } from './_directives/background-change.direc
     DashboardComponent,
     MultiplierPipe,
     BackgroundChangeDirective,
+    LifecycleComponent,
     
   ],
   imports: [
