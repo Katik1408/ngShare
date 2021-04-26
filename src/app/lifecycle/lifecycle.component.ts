@@ -11,7 +11,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { DataService } from '../services/data.service';
-import { FormGroupDirective, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-lifecycle',
