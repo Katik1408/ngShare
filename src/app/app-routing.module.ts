@@ -7,6 +7,7 @@ import { CreatestudentComponent } from './createstudent/createstudent.component'
 import { LoginComponent } from 'src/app/login/login.component';
 import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 import { AuthGuard } from 'src/app/_guards/auth.guard';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 const routes: Routes = [
   {
     path: 'parent',
@@ -32,6 +33,10 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path:'lifecycle',
+    component:LifecycleComponent
   },
   {
     path: 'lazy',
