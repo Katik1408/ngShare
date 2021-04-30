@@ -14,6 +14,8 @@ import { DataService } from '../services/data.service';
 import { FormGroup } from '@angular/forms';
 import { ThrowStmt } from '@angular/compiler';
 
+declare const hello: any;
+
 @Component({
   selector: 'app-lifecycle',
   templateUrl: './lifecycle.component.html',
@@ -29,6 +31,10 @@ export class LifecycleComponent
     AfterViewInit,
     OnDestroy,
     OnChanges {
+  click() {
+    hello();
+  }
+
   order = 1;
   constructor(private data: DataService) {
     console.log('Inside Constructor and order is ' + this.order);
@@ -67,7 +73,7 @@ export class LifecycleComponent
   ngOnInit(): void {
     this.title = 'title';
     this.form = new FormGroup({});
-    console.log('Inside ngOnInit and order is '+ this.order);
+    console.log('Inside ngOnInit and order is ' + this.order);
     this.order++;
   }
 }
